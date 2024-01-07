@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+    <style>
+        div{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+            Use swithch key = add,sub,mul ,div, rem a and b
+        </h1>
+    </center>
+
+    <hr>
+    <form onsubmit="codeHandler(event)">
+        <div>
+            <label for="op">Choose An Operation</label>
+            <select name="mySelect" id="selectOperation">
+                <option value="add">Addition</option>
+                <option value="sub">Substraction</option>
+                <option value="mul">multiplication</option>
+                <option value="div">Division</option>
+                <option value="mod">Modulus</option>
+            </select>
+        </div>
+        <div>
+            <label for="inpA">Enter Input a?</label>
+            <input type="number" name="inpA" id="inpA" required>
+        </div>
+
+        <div>
+            <label for="inpB">Enter Input b?</label>
+            <input type="number" name="inpB" id="inpB" required>
+        </div>
+        <button type="submit">Execute Code</button>
+    </form>
+    <hr>
+
+    <div id="result"></div>
+
+
+    <script>
+
+        function calOparan(b){
+        var sel = document.getElementById('selectOperation');
+        var sel_opera = sel.options[sel.selectedIndex].value;
+
+        if(sel_opera=="add")
+        {
+            var sel_opera = "+";
+        }
+        if(sel_opera=="sub"){
+            var sel_opera = "-";
+        }
+        if(sel_opera=="mul"){
+            var sel_opera = "*";
+        }
+        if(sel_opera=="div"){
+            var sel_opera = "/";
+        }
+        if(sel_opera=="mod"){
+            var sel_opera = "%";
+        }
+
+        calculateNow(sel_opera);
+        }
+
+        function calculateNow(sel_opera){
+            var opr = sel_opera;    //calOparan(document.querySelector('#selectOperation'));
+            var input1 = document.getElementById('inpA').value;
+            var inpA =  input1 ==  "" ? 0 : input1;
+
+            var input2 = document.getElementById('inpB');
+            inpB = document.getElementById("inpB").value;
+            var result = eval(inpA + opr + inpB);
+            document.getElementById('result').innerHTML= result;
+        }
+
+        document.getElementById('inpA').addEventListener('input', calOparan);
+        document.getElementById('inpB').addEventListener('input', calOparan);
+        document.getElementById('selectOperation').addEventListener('input',calOparan);
+
+    </script>
+</body>
+</html>

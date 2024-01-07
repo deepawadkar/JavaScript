@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>SCOPE</h1>
+    </center>
+    <hr>
+
+    <script>
+
+        let x = 15;
+
+        if ( x > 10) {
+            var a = 155; //global
+            let b = 122; //block , (re assign the value)
+            const c = 144; //block (fixed value - cann't re-assign the value)
+
+            document.write(`<h3>Global X (block scope) = ${ x } </h3>`);//Global Scope
+            document.write(`<h3>local A (block scope) = ${ a } </h3>`);//Global Scope
+            document.write(`<h3>local B (block scope) = ${ b } </h3>`);//Block Scope
+            document.write(`<h3>local C (block scope) = ${ c } </h3>`);//Block Scope
+
+        }
+        document.write("<hr>");
+        
+        document.write(`<h3>Global X (Global scope) = ${ x } </h3>`);//Global Scope
+        document.write(`<h3>local A (Global scope) = ${ a } </h3>`);//Global Scope
+        document.write(`<h3>local B (Global scope) = ${ b } </h3>`);//Block Scope
+        document.write(`<h3>local C (Global scope) = ${ c } </h3>`);//Block Scope
+
+
+    </script>
+</body>
+</html>

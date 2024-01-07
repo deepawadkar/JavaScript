@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h2>21) some();</h2>
+        <p>The some() method tests whether at least one element in the array passes the test implemented by the provided function.</p>
+        <p>It returns a true Value if, in the array , it found an element for which the provided function returns true ; otherwise it returns false. It doesnot modifies the Array</p>
+       
+        
+    </center>
+    <hr>
+
+    <p><b>SYNTAX :</b></p>
+
+    <pre>
+         Array.some((element)=>{});
+
+    </pre>
+    <hr>
+
+    <script>
+        let args = [3,10,18,20];
+        
+        function checkAdult(age) {
+            return age > 18;
+        }
+      
+        document.write(`<p>Array.some()  : ${args.some(checkAdult)}</p>`);
+        
+            
+    </script>
+</body>
+</html>

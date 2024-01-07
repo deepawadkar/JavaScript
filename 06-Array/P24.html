@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <center>
+        <h2>23) copywithin();</h2>
+        <p>The copywithin() method copies array elements to another position in the array, and this method overwrites the existing values.</p>
+        <p>The copywithin() method does not add items to the array</p>
+    </center>
+
+    <hr>
+
+    <p><b>SYNTAX :</b></p>
+
+    <pre>
+        array.copywithin(target, start, end)
+    </pre>
+    <hr>
+
+    <script>
+        //copy two array elements to the last two array elements
+        let fruits = ["Apple","Banana","Mango","Orange"];
+
+        document.write(`<p>Befor the result of array.copywithin(target,start ,end) : ${fruits}</p>`);
+        document.write(`<p>After the result of array.copywithin(target,start ,end) : ${fruits.copywithin(2,0)}</p>`);
+
+        //copy the first two array elements to the third and fourth position
+        let fruit = ["Apple","Banana","Mango","Orange"];
+
+        document.write(`<p>Befor the result of array.copywithin(target,start ,end) : ${fruit}</p>`);
+        document.write(`<p>After the result of array.copywithin(target,start ,end) : ${fruit.copywithin(2,0,2)}</p>`);
+    </script>
+</body>
+</html>
